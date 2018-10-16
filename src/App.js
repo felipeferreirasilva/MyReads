@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 
@@ -75,7 +76,7 @@ class BooksApp extends React.Component {
         {this.state.showSearchPage ? (
           <div className="search-books">
             <div className="search-books-bar">
-              <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
+              <Link to="/" className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</Link>
               <div className="search-books-input-wrapper">
                 {/* TRANSFORMA O INPUT EM UM COMPONENTE CONTROLADO E CHAMA A FUNÇAO DE PESQUISA AO ALTERAR O VALOR DO CAMPO */}
                 <input type="text" placeholder="Search by title or author" value={this.state.query} onChange={(event) => this.searchBook(event.target.value)} />
@@ -174,7 +175,7 @@ class BooksApp extends React.Component {
                 </div>
               </div>
               <div className="open-search">
-                <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+                <Link to="/search" onClick={() => this.setState({ showSearchPage: true })}>Add a book</Link>
               </div>
             </div>
           )}
