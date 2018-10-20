@@ -1,6 +1,18 @@
 # MyReads Project
 
-MyReads is a React project that creates virtual shelves of books based on an API.
+MyReads is a project that creates virtual shelves of books based on an API, so you can follow your actual and future readings.
+
+# Install and Run
+
+This project was created using React framework, to run it locally you will need to download NodeJs from https://nodejs.org. After download Node, download the project MyReads, extract, access directory where your project is located, run the command "npm install" to download all modules and after that run the command "npm start" to start the project.
+
+# Author
+
+This project was created by Felipe Silva (felipeferreirasilva@gmail.com)
+
+# Contributing
+
+You can download, modify, and use this project whenever you want. But I'll most likely will not accept pull requests.
 
 ## Backend Server
 
