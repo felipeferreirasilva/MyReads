@@ -8,7 +8,7 @@ class BooksApp extends React.Component {
     // ESTANTE DO USUARIO
     books: [{}],
     // CATEGORIAS DE ESTANTES DO USUARIO
-    shelfs: ["currentlyReading", "wantToRead", "read"],
+    shelves: ["currentlyReading", "wantToRead", "read"],
     // QUERY DE PESQUISA
     query: "",
     // ESTANTE DE PESQUISA
@@ -78,7 +78,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         <Routes
-          shelfs={this.state.shelfs}
+          shelves={this.state.shelves}
           books={this.state.books}
           updateShelf={this.updateShelf}
           query={this.state.query}

@@ -7,7 +7,7 @@ const Routes = props => {
     return (
         <div>
             <Route path="/" exact render={() => <UserBooks
-                shelfs={props.shelfs}
+                shelves={props.shelves}
                 books={props.books}
                 updateShelf={props.updateShelf}
             />} />

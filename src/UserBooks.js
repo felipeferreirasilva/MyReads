@@ -11,7 +11,7 @@ const UserBooks = props => {
             <div className="list-books-content">
                 <div>
                     {/* MAPEIA AS ESTANTES CADASTRADAS E EM SEGUIDA DISTRIBUI O LIVRO NA ESTANTE CORRESPONDENTE */}
-                    {props.shelfs.map(shelf => (
+                    {props.shelves.map(shelf => (
                         <div key={shelf} className="bookshelf">
                             <h2 className="bookshelf-title">
                                 {/* COMPARA O NOME DA ESTANTE E CORRIGE A ESCRITA PARA EXIBIR CORRETAMENTE */}
