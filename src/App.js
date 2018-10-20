@@ -34,9 +34,10 @@ class BooksApp extends React.Component {
   // ATUALIZA A ESTANTE DO LIVRO DE ACORDO COM A OPÇAO SELECIONADA
   updateShelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
-      .then(() => (
+      .then((res) => {
         this.getBooks()
-      ))
+        this.searchBook(this.state.query)
+      })
       .catch(error => console.log(error))
   }
 
@@ -45,15 +46,26 @@ class BooksApp extends React.Component {
     this.setState({
       query: query
     })
-
     // VERIFICA SE O INPUT ESTA VAZIO ANTES DE EFETUAR A REQUISIÇAO
     if (query !== "") {
       BooksAPI.search(query)
-        .then(search => (
+        .then(search => {
+          // ATUALIZA AS ESTANTES DOS LIVROS JA SELECIONADOS PELO USUARIO
+          search.map(s => (
+            this.state.books.map(b => {
+              s.id === b.id && (
+                s.shelf = b.shelf
+              )
+              s.shelf === undefined && (
+                s.shelf = "none"
+              )
+              return search
+            })
+          ))
           this.setState({
             booksSearched: search
           })
-        ))
+        })
     } else {
       // SE A QUERY ESTIVER VAZIA, LIMPA A ESTANTE DE PESQUISA
       this.setState({

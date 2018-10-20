@@ -25,7 +25,9 @@ const UserBooks = props => {
                                     {props.books.map(book => (
                                         book.shelf === shelf && (
                                             <li key={book.id}>
-                                                <Book book={book} updateShelf={props.updateShelf} />
+                                                <Book
+                                                    book={book}
+                                                    updateShelf={props.updateShelf} />
                                             </li>
                                         )
                                     ))}

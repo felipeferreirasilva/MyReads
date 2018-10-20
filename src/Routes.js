@@ -9,7 +9,7 @@ const Routes = props => {
             <Route path="/" exact render={() => <UserBooks
                 shelfs={props.shelfs}
                 books={props.books}
-                updateShelf={this.updateShelf}
+                updateShelf={props.updateShelf}
             />} />
 
             <Route path="/search" render={() => <Search
