@@ -8,7 +8,20 @@ class BooksApp extends React.Component {
     // ESTANTE DO USUARIO
     books: [{}],
     // CATEGORIAS DE ESTANTES DO USUARIO
-    shelves: ["currentlyReading", "wantToRead", "read"],
+    shelves: [
+      {
+        name: "Currently Reading",
+        value: "currentlyReading"
+      },
+      {
+        name: "Want To Read",
+        value: "wantToRead"
+      },
+      {
+        name: "Read",
+        value: "read"
+      }
+    ],
     // QUERY DE PESQUISA
     query: "",
     // ESTANTE DE PESQUISA

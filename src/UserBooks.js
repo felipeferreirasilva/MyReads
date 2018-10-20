@@ -10,20 +10,15 @@ const UserBooks = props => {
             </div>
             <div className="list-books-content">
                 <div>
-                    {/* MAPEIA AS ESTANTES CADASTRADAS E EM SEGUIDA DISTRIBUI O LIVRO NA ESTANTE CORRESPONDENTE */}
+                    {/* MAPEIA AS ESTANTES E EM SEGUIDA DISTRIBUI O LIVRO NA ESTANTE CORRESPONDENTE */}
                     {props.shelves.map(shelf => (
-                        <div key={shelf} className="bookshelf">
-                            <h2 className="bookshelf-title">
-                                {/* COMPARA O NOME DA ESTANTE E CORRIGE A ESCRITA PARA EXIBIR CORRETAMENTE */}
-                                {shelf === "currentlyReading" && ("Currently Reading")}
-                                {shelf === "wantToRead" && ("Want To Read")}
-                                {shelf === "read" && ("Read")}
-                            </h2>
+                        <div key={shelf.name} className="bookshelf">
+                            <h2 className="bookshelf-title">{shelf.name}</h2>
                             <div className="bookshelf-books">
                                 <ol className="books-grid">
                                     {/* MAPEIA OS LIVROS DO USUARIO E DISTRUBUI NA ESTANTE CORRESPONDENTE */}
                                     {props.books.map(book => (
-                                        book.shelf === shelf && (
+                                        book.shelf === shelf.value && (
                                             <li key={book.id}>
                                                 <Book
                                                     book={book}
