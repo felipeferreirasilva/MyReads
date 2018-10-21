@@ -8,7 +8,7 @@ This project was created using React framework, to run it locally you will need 
 
 # Author
 
-This project was created by Felipe Silva (felipeferreirasilva@gmail.com)
+This project was created by Felipe Silva (felipeferreirasilva@gmail.com).
 
 # Contributing
 
