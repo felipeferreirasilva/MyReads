@@ -12,7 +12,7 @@ This project was created by Felipe Silva (felipeferreirasilva@gmail.com)
 
 # Contributing
 
-You can download, modify, and use this project whenever you want. But I'll most likely will not accept pull requests.
+You can download, modify, and use this project whenever you want. I will not accept pull requests.
 
 ## Backend Server
 
